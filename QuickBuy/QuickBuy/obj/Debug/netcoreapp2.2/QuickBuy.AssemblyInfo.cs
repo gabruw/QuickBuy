@@ -11,14 +11,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Bernardo Lloret-Fuentes")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("QuickBuy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("ASP.NET Core 2.2 with Angular 7 Template")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.1")]
-[assembly: System.Reflection.AssemblyProductAttribute("ASP.NET Core 2.2 with Angular 7 Template")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ASP.NET Core 2.2 with Angular 7")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.0.1.0")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyProductAttribute("QuickBuy")]
+[assembly: System.Reflection.AssemblyTitleAttribute("QuickBuy")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 
