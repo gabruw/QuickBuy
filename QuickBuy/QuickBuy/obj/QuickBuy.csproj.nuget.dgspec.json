@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SHU Aeronáutica 01\\Source\\Repos\\QuickBuy\\QuickBuy\\QuickBuy.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SHU Aeronáutica 01\\Source\\Repos\\QuickBuy\\QuickBuy\\QuickBuy.csproj": {
+      "version": "2.0.1",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SHU Aeronáutica 01\\Source\\Repos\\QuickBuy\\QuickBuy\\QuickBuy.csproj",
+        "projectName": "ASP.NET Core 2.2 with Angular 7 Template",
+        "projectPath": "C:\\Users\\SHU Aeronáutica 01\\Source\\Repos\\QuickBuy\\QuickBuy\\QuickBuy.csproj",
+        "packagesPath": "C:\\Users\\SHU Aeronáutica 01\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SHU Aeronáutica 01\\Source\\Repos\\QuickBuy\\QuickBuy\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SHU Aeronáutica 01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

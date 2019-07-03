@@ -1,0 +1,24 @@
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\bin\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.deps.json
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\bin\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.runtimeconfig.json
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\bin\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.runtimeconfig.dev.json
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\bin\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.dll
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\bin\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.pdb
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\bin\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.Views.dll
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\bin\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.Views.pdb
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.csprojAssemblyReference.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.csproj.CoreCompileInputs.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.RazorAssemblyInfo.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.RazorAssemblyInfo.cs
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.AssemblyInfoInputs.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.AssemblyInfo.cs
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.TagHelpers.input.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.TagHelpers.output.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.RazorCoreGenerate.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\Razor\Pages\Error.g.cshtml.cs
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.g.cshtml.cs
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.RazorTargetAssemblyInfo.cache
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.RazorTargetAssemblyInfo.cs
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.Views.pdb
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.dll
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\ASP.NET Core 2.2 with Angular 7.pdb
+C:\Users\SHU Aeronáutica 01\Source\Repos\QuickBuy\QuickBuy\obj\Debug\netcoreapp2.2\QuickBuy.csproj.CopyComplete
