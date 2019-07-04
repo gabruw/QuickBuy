@@ -1,0 +1,14 @@
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\bin\Debug\netstandard2.0\Domain.dll
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\bin\Debug\netstandard2.0\Domain.pdb
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\bin\Debug\netstandard2.0\Microsoft.Extensions.Identity.Stores.xml
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\obj\Debug\netstandard2.0\Domain.csproj.CopyComplete
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\obj\Debug\netstandard2.0\Domain.dll
+C:\Users\SHU Aeronáutica 01\Documents\GitHub\QuickBuy\QuickBuy\Domain\obj\Debug\netstandard2.0\Domain.pdb
