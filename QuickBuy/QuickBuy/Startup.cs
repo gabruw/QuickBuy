@@ -27,6 +27,14 @@ namespace QuickBuy
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            // DB Connection
+            var connectionString = Configuration.GetConnectionString("db_QuickBuy");
+
+            services.AddDbContext<QuickBuyContext>(option => option.UseLazyLoadingProxies().UseMySql(connectionString, m => m.MigrationsAssembly("Repository")));
+
+            // Scope's
+            //services.AddScoped<Domain.Repository.IAgendaRepository, Repository.Repository.AgendaRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +59,9 @@ namespace QuickBuy
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Home", action = "Index" }
+                );
             });
 
             app.UseSpa(spa =>

@@ -12082,11 +12082,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\snyp_\\source\\repos\\QuickBuy\\QuickBuy\\QuickBuy.csproj",
+      "projectUniqueName": "C:\\Users\\snyp_\\Documents\\GitHub\\QuickBuy\\QuickBuy\\QuickBuy\\QuickBuy.csproj",
       "projectName": "QuickBuy",
-      "projectPath": "C:\\Users\\snyp_\\source\\repos\\QuickBuy\\QuickBuy\\QuickBuy.csproj",
+      "projectPath": "C:\\Users\\snyp_\\Documents\\GitHub\\QuickBuy\\QuickBuy\\QuickBuy\\QuickBuy.csproj",
       "packagesPath": "C:\\Users\\snyp_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\snyp_\\source\\repos\\QuickBuy\\QuickBuy\\obj\\",
+      "outputPath": "C:\\Users\\snyp_\\Documents\\GitHub\\QuickBuy\\QuickBuy\\QuickBuy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
