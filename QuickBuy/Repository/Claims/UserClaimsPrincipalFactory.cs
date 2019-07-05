@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Repository.Claims
 {
-    public class UserClaimsPrincipalFactory : UserClaimsPrincipalFactory<UserDTO>
+    public class UserClaimsPrincipalFactory : UserClaimsPrincipalFactory<AccountIDTO>
     {
-        public UserClaimsPrincipalFactory(UserManager<UserDTO> userManager, IOptions<IdentityOptions> optionsAccessor) : base(userManager, optionsAccessor)
+        public UserClaimsPrincipalFactory(UserManager<AccountIDTO> userManager, IOptions<IdentityOptions> optionsAccessor) : base(userManager, optionsAccessor)
         {
             
         }
 
-        protected override async Task<ClaimsIdentity> GenerateClaimsAsync(UserDTO user)
+        protected override async Task<ClaimsIdentity> GenerateClaimsAsync(AccountIDTO user)
         {
             var identity = await base.GenerateClaimsAsync(user);
 

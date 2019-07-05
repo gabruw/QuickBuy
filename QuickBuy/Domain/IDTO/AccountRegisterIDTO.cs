@@ -1,9 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Domain.DTO
+namespace Domain.IDTO
 {
-    public class AccountDTO
+    public class AccountRegisterIDTO
     {
+        [Required]
+        [MaxLength(240)]
+        public string Name { get; set; }
+
+        [MaxLength(500)]
+        public string LastName { get; set; }
+
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

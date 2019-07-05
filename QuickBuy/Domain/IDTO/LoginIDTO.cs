@@ -2,10 +2,12 @@
 
 namespace Domain.DTO
 {
-    public class ForgotPasswordDTO
+    public class LoginIDTO
     {
-        [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
     }
 }

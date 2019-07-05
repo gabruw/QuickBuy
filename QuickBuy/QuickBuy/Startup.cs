@@ -1,7 +1,7 @@
 using Domain.DTO;
+using Domain.IRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Repository.Claims;
 using Repository.Context;
+using Repository.Repository;
 using Repository.Requirements;
 using System;
 using System.Reflection;
@@ -39,7 +40,7 @@ namespace QuickBuy
 
             #region Database Connect
             // Connection String - Migration Local - Connect 
-            var connectionString = Configuration.GetConnectionString("db_QuickBuy");
+            var connectionString = Configuration.GetConnectionString("QuickBuyDB");
             var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
             
             services.AddDbContext<QuickBuyContext>(options => options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationAssembly)));
@@ -47,7 +48,7 @@ namespace QuickBuy
 
             #region Identity
             // Identity
-            services.AddIdentity<UserDTO, IdentityRole>(options =>
+            services.AddIdentity<AccountIDTO, IdentityRole>(options =>
             {
                 // Confirmar e-mail login
                 options.SignIn.RequireConfirmedEmail = true;
@@ -70,9 +71,14 @@ namespace QuickBuy
 
             #region Scope's
             // Scope's
-            services.AddScoped<IUserStore<UserDTO>, UserOnlyStore<UserDTO, QuickBuyContext>>();
-            services.AddScoped<IUserClaimsPrincipalFactory<UserDTO>, UserClaimsPrincipalFactory>();
-            //services.AddScoped<Domain.Repository.IAgendaRepository, Repository.Repository.AgendaRepository>();
+            services.AddScoped<IUserStore<AccountIDTO>, UserOnlyStore<AccountIDTO, QuickBuyContext>>();
+            services.AddScoped<IUserClaimsPrincipalFactory<AccountIDTO>, UserClaimsPrincipalFactory>();
+            services.AddScoped<IAddressRepository, AddressRepository>();
+            services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IPaymentFormRepository, PaymentFormRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             #endregion
         }
 

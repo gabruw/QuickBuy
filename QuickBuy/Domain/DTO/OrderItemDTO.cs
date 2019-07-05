@@ -12,24 +12,26 @@ namespace Domain.DTO
         public int IdProduct { get; set; }
 
         [ForeignKey("IdProduct")]
-        public ProductDTO UserOrder { get; set; }
+        public virtual ProductDTO ProductOrderItem { get; set; }
 
-        public int IdEndereco { get; set; }
+        public int IdAddress { get; set; }
 
-        [ForeignKey("IdEndereco")]
-        public AddressDTO EnderecoOrderItem { get; set; }
+        [ForeignKey("IdAddress")]
+        public virtual AddressDTO AddressOrderItem { get; set; }
+
+        //For Track
+        public virtual OrderDTO OrderOrderItem { get; set; }
 
         [Required]
-        [MinLength(1)]
         public int Amount { get; set; }
 
         public override void Validate()
         {
             ClearValidateMenssages();
 
-            if (Amount < 0)
+            if (Amount < 1)
             {
-                AddError("Erro: A Quantidade de Items do Pedido está vazia.");
+                ValidationMessage.Add("Erro: A Quantidade de Items do Pedido está vazia.");
             }
         }
     }
