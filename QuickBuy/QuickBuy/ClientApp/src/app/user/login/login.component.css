@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/img/Login/background.jpg');
+}
+
+#Logo {
+  width: auto;
+  height: auto;
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.form-control {
+  background: #F2F2F2;
+  min-height: 41px;
+  box-shadow: none !important;
+}
+
+  .form-control:focus {
+    background: #E2E2E2;
+  }
+
+.login-form {
+  width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+  .login-form form {
+    color: #7A7A7A;
+    background: #FFFFFF;
+    padding: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .login-form .btn {
+    border: none;
+    border-radius: 0px;
+    background: #313540;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none !important;
+  }
+
+    .login-form .btn:hover {
+      background: #626A7F;
+    }
+
+  .login-form a {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+
+    .login-form a:hover {
+      text-decoration: none;
+    }
+
+  .login-form form a {
+    color: #7A7A7A;
+    text-decoration: none;
+  }
+
+    .login-form form a:hover {
+      text-decoration: underline;
+    }
