@@ -1,6 +1,6 @@
 <div class="login-form">
   <form>
-    <img id="Logo" src="/img/Texture-Default.png" />
+    <img id="Logo" src="/img/Logo/Quick-Buy-logo.png" />
 
     <br />
     <br />
@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <input type="email" id="Email" class="form-control" name="email" placeholder="Email" required>
+        <input type="email" id="Email" class="form-control" name="email" placeholder="Email" [(ngmodel)]="email" required>
       </div>
     </div>
 
@@ -29,14 +29,14 @@
           </div>
         </div>
 
-        <input type="password" id="Password" class="form-control" name="password" placeholder="Password" required>
+        <input type="password" id="Password" class="form-control" name="password" placeholder="Password" [(ngmodel)]="password" required>
       </div>
     </div>
 
     <br />
 
     <div class="form-group">
-      <button type="submit" id="Login" class="btn btn-primary btn-lg btn-block" name="login">ENTER</button>
+      <button type="submit" id="Login" class="btn btn-primary btn-lg btn-block" name="login" (click)="signIn()">ENTER</button>
     </div>
   </form>
 </div>
