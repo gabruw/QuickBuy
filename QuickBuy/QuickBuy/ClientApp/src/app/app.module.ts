@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-//import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -23,12 +22,7 @@ import { LoginComponent } from './user/login/login.component';
   imports: [
     BrowserModule,
     FormsModule,
-    //AppRoutingModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'product', component: ProductComponent },
-      { path: 'login', component: LoginComponent },
-    ])
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
