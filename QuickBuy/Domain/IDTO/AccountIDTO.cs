@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
-namespace Domain.DTO
+namespace Domain.IDTO
 {
     public class AccountIDTO : IdentityUser
     {
