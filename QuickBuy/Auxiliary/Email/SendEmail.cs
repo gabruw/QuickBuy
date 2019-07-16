@@ -96,9 +96,9 @@ namespace Auxiliary.Email
         /// <summary>
         /// Send email without attachment
         /// </summary>
-        /// <param name="email"></param>
-        /// <param name="subject"></param>
-        /// <param name="message"></param>
+        /// <param name="email">Recipient's email address</param>
+        /// <param name="subject">Subject about the email</param>
+        /// <param name="message">Message in escope</param>
         /// <returns></returns>
         public Task SendEmailAsync(string email, string subject, string message)
         {
@@ -117,11 +117,11 @@ namespace Auxiliary.Email
         /// <summary>
         /// Send email with attachment
         /// </summary>
-        /// <param name="email"></param>
-        /// <param name="subject"></param>
-        /// <param name="message"></param>
-        /// <param name="archive"></param>
-        /// <param name="contentType"></param>
+        /// <param name="email">Recipient's email address</param>
+        /// <param name="subject">Subject about the email</param>
+        /// <param name="message">Message in escope</param>
+        /// <param name="archive">Attachment in the email</param>
+        /// <param name="contentType">Attachment content type</param>
         /// <returns></returns>
         public Task SendEmailAsync(string email, string subject, string message, System.IO.Stream archive, ContentType contentType)
         {
