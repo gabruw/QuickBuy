@@ -9,12 +9,12 @@ namespace Auxiliary.Email
 {
     public class SendEmail : IEmailSender
     {
+        public EmailSettings _emailSettings { get; }
+
         public SendEmail(IOptions<EmailSettings> emailSettings)
         {
             _emailSettings = emailSettings.Value;
         }
-
-        public EmailSettings _emailSettings { get; }
 
         /// <summary>
         /// Execute the email send without attachment

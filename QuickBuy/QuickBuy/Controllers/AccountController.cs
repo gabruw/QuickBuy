@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Net.Mail;
 using System.Threading.Tasks;
+using Auxiliary.Email;
 using Domain.IDTO;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
@@ -11,13 +11,15 @@ namespace QuickBuy.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<AccountIDTO> _userManager;
+        private readonly UserManager<AccountIDTO> _accountManager;
         private readonly IUserClaimsPrincipalFactory<AccountIDTO> _userClaimsPrincipalFactory;
+        private readonly IEmailSender _emailSender;
 
-        public AccountController(UserManager<AccountIDTO> userManager, IUserClaimsPrincipalFactory<AccountIDTO> userClaimsPrincipalFactory)
+        public AccountController(UserManager<AccountIDTO> accountManager, IUserClaimsPrincipalFactory<AccountIDTO> userClaimsPrincipalFactory, IEmailSender emailSender)
         {
-            this._userManager = userManager;
+            this._accountManager = accountManager;
             this._userClaimsPrincipalFactory = userClaimsPrincipalFactory;
+            this._emailSender = emailSender;
         }
 
         // GET: Account/Login
@@ -29,26 +31,26 @@ namespace QuickBuy.Controllers
 
         // POST: Account/SignIn
         [HttpPost]
-        public async Task<IActionResult> SignIn(LoginIDTO loginIModel)
+        public async Task<IActionResult> SignIn(IFormCollection collection)
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByNameAsync(loginIModel.Email);
-                var paswordCheck = await _userManager.CheckPasswordAsync(user, loginIModel.Password);
-                var emailCheck = await _userManager.IsEmailConfirmedAsync(user);
-                var lockCheck = await _userManager.IsLockedOutAsync(user);
+                var account = await _accountManager.FindByEmailAsync(collection["email"]);
+                var paswordCheck = await _accountManager.CheckPasswordAsync(account, collection["password"]);
+                var emailCheck = await _accountManager.IsEmailConfirmedAsync(account);
+                var lockCheck = await _accountManager.IsLockedOutAsync(account);
 
                 if (lockCheck == false)
                 {
-                    if (user != null)
+                    if (account != null)
                     {
                         if (paswordCheck == true)
                         {
                             if (emailCheck == true)
                             {
-                                await _userManager.ResetAccessFailedCountAsync(user);
+                                await _accountManager.ResetAccessFailedCountAsync(account);
 
-                                var principal = await _userClaimsPrincipalFactory.CreateAsync(user);
+                                var principal = await _userClaimsPrincipalFactory.CreateAsync(account);
 
                                 await HttpContext.SignInAsync("Identity.Application", principal);
 
@@ -73,9 +75,20 @@ namespace QuickBuy.Controllers
                 {
                     ModelState.AddModelError("", "Usuário bloqueado, aguarde...");
 
-                    await _userManager.AccessFailedAsync(user);
+                    await _accountManager.AccessFailedAsync(account);
 
-                    // send email here
+                    // Send Email for Recovery Password
+                    try
+                    {
+                        var emailMessage = new EmailMessage();
+                        await emailMessage.RecoveryPasswordAsync(account.Email, _emailSender);
+
+                        return RedirectToAction("SuccessToSendEmail");
+                    }
+                    catch (Exception ex)
+                    {
+                        return RedirectToAction("FailToSendEmail", ex);
+                    }   
                 }
             }
 
@@ -95,7 +108,7 @@ namespace QuickBuy.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByNameAsync(registerIModel.Email);
+                var user = await _accountManager.FindByNameAsync(registerIModel.Email);
 
                 if (user == null)
                 {
@@ -105,11 +118,11 @@ namespace QuickBuy.Controllers
                         UserName = registerIModel.Email
                     };
 
-                    var result = await _userManager.CreateAsync(user, registerIModel.Password);
+                    var result = await _accountManager.CreateAsync(user, registerIModel.Password);
 
                     if (result.Succeeded)
                     {
-                        var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                        var token = await _accountManager.GenerateEmailConfirmationTokenAsync(user);
 
                         var confimationEmail = Url.Action("ConfirmEmailAddress", "Home",
                             new
@@ -141,11 +154,11 @@ namespace QuickBuy.Controllers
         [HttpGet]
         public async Task<IActionResult> ConfirmationEmailAsync(string token, string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _accountManager.FindByEmailAsync(email);
 
             if (user != null)
             {
-                var result = await _userManager.ConfirmEmailAsync(user, token);
+                var result = await _accountManager.ConfirmEmailAsync(user, token);
 
                 if (result.Succeeded)
                 {
@@ -169,11 +182,11 @@ namespace QuickBuy.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByEmailAsync(forgotPasswordIModel.Email);
+                var user = await _accountManager.FindByEmailAsync(forgotPasswordIModel.Email);
 
                 if (user != null)
                 {
-                    var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                    var token = await _accountManager.GeneratePasswordResetTokenAsync(user);
 
                     var resetUrl = Url.Action("ResetPassword", "Home",
                         new
@@ -210,11 +223,11 @@ namespace QuickBuy.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByEmailAsync(resetPasswordIModel.Email);
+                var user = await _accountManager.FindByEmailAsync(resetPasswordIModel.Email);
 
                 if (user != null)
                 {
-                    var result = await _userManager.ResetPasswordAsync(user, resetPasswordIModel.Token, resetPasswordIModel.Password);
+                    var result = await _accountManager.ResetPasswordAsync(user, resetPasswordIModel.Token, resetPasswordIModel.Password);
 
                     if (!result.Succeeded)
                     {

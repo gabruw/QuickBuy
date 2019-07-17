@@ -1,4 +1,5 @@
 ﻿using Domain.DTO;
+using Domain.IDTO;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Repository.Configure;

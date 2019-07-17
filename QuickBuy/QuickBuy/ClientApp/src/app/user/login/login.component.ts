@@ -1,4 +1,5 @@
 import { Component } from "@angular/core"
+import { Router } from "@angular/router"
 
 @Component({
   selector: "app-login",
@@ -12,7 +13,12 @@ export class LoginComponent {
 
   public form = new FormData();
 
-  signIn() {
+  constructor(private router: Router) {
 
+  }
+
+  signIn() {
+    sessionStorage.setItem("authorize-user", "true");
+    this.router.navigate(['/']);
   }
 }

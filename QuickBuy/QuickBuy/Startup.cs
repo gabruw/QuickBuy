@@ -1,4 +1,6 @@
+using Auxiliary.Email;
 using Domain.DTO;
+using Domain.IDTO;
 using Domain.IRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -79,6 +81,12 @@ namespace QuickBuy
             services.AddScoped<IPaymentFormRepository, PaymentFormRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            #endregion
+
+            #region Email
+            // Email Configuration
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+            services.AddTransient<IEmailSender, SendEmail>();
             #endregion
         }
 

@@ -17,16 +17,20 @@
             <a class="nav-link text-light" [routerLink]='["/"]'>Home</a>
           </li>
 
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="isAuthorizedUser()">
             <a class="nav-link text-light" [routerLink]='["/product"]'>Product</a>
           </li>
 
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="isAuthorizedUser()">
+            <a class="nav-link text-light" [routerLink]='["/register"]'>Register</a>
+          </li>
+
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="!isAuthorizedUser()">
             <a class="nav-link text-light" [routerLink]='["/login"]'>Login</a>
           </li>
 
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-light" [routerLink]='["/register"]'>Register</a>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="isAuthorizedUser()">
+            <a class="nav-item nav-link text-light" [routerLink]='["/sair"]' (click)="SignOut()">SignOut</a>
           </li>
         </ul>
       </div>
